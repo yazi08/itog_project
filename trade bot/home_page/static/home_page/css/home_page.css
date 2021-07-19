@@ -3,6 +3,7 @@ body {
 
 }
 
+
 aside{
     float:left;
     background:black;
@@ -33,20 +34,27 @@ aside ul li {
 }
 
 aside ul li:hover, aside ul a:hover {
-    color:#FFFF00;
+    color:#FFD700;
     text-decoration: none;
     transform: scale(1.05);
 }
 
-nav {
+nav{
     float:right;
     color:#fff;
 
 }
+
 nav ul {
-    list-list: none;
-    display: inline;
-    margin-right: 10px
+    list-style-type: none; /* Убираем маркеры */
+    margin-top: 20px;
+    margin-right: 10px;
+
+
+   }
+
+nav ul li {
+    display: inline; /* Отображать как строчный элемент */
 }
 
 
