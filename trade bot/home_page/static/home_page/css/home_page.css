@@ -1,0 +1,52 @@
+body {
+    background: #2c2c2c;
+
+}
+
+aside{
+    float:left;
+    background:black;
+    width: 18%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside img {
+    margin-top:5px;
+    width: 170px;
+    float:left;
+}
+
+aside h3 {
+    margin-top:50px;
+    font-size: 28px;
+}
+aside ul {list-list: none}
+aside ul li {
+    color:#fff;
+    display: block;
+    margin-top: 20px;
+    transition: all .6s ease;
+
+}
+
+aside ul li:hover, aside ul a:hover {
+    color:#FFFF00;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+nav {
+    float:right;
+    color:#fff;
+
+}
+nav ul {
+    list-list: none;
+    display: inline;
+    margin-right: 10px
+}
+
+
