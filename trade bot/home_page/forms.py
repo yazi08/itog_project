@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.forms import ModelForm
 
 
-
+"""Форма для регистрации"""
 class RegisterUserForm(UserCreationForm):
     username = forms.CharField(label='Логин',widget=forms.TextInput(attrs={'class':'form-input'}))
     password1 = forms.CharField(label='Пароль',widget=forms.PasswordInput(attrs={'class': 'form-input'}))

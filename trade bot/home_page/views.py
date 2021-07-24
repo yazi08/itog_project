@@ -18,9 +18,14 @@ class RegisterUser(CreateView):
     success_url = reverse_lazy('home_page')
 
 
+"""Авторизация"""
 
+class LoginUser(LoginView):
+    form_class =AuthenticationForm
+    template_name = 'register/authentication.html'
 
-
-
+    """Перевод на страницу после авторизации"""
+    def get_success_url(self):
+        return reverse_lazy('home_page')
 
 
