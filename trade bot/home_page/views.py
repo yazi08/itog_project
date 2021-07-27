@@ -26,6 +26,11 @@ class LoginUser(LoginView):
 
     """Перевод на страницу после авторизации"""
     def get_success_url(self):
-        return reverse_lazy('home_page')
+        return reverse_lazy('client')
+
+
+"""Страница клиента"""
+def client(request):
+    return render(request, 'client/client.html')
 
 
