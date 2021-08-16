@@ -3,13 +3,17 @@ from django.contrib.auth.views import LoginView
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DetailView, ListView
 from .forms import *
+from .models import *
 
-def home_page(request):
-    return render(request, 'home_page/home_page.html')
+# def home_page(request):
+#     return render(request, 'home_page/home_page.html')
 
-
+class HomeDetailView(ListView):
+    model = Blog
+    template_name = "home_page/home_page.html"
+    context_object_name = 'blog'
 
 """Регистрация"""
 class RegisterUser(CreateView):

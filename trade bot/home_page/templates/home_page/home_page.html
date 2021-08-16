@@ -17,7 +17,7 @@
         <img src="{% static 'home_page/img/logo_2.png' %}" alt="Логотип">
         <h3>Навигация</h3>
         <ul>
-            <a href=""><li><i class="fas fa-home"></i>Главная</li></a>
+            <a href="{% url 'home_page' %}"><li><i class="fas fa-home"></i>Главная</li></a>
             <a href=""><li><i class="fas fa-address-card"></i>Про нас</li></a>
             <a href=""><li><i class="fas fa-paper-plane"></i></i>Контакты</li></a>
         </ul>
@@ -32,6 +32,22 @@
 
     <main>
         {% block content %}
+        <div class="blog">
+            <h1>Новости</h1>
+
+            {% for el in blog %}
+            <div class="alter alert-warning">
+
+
+                <h3>{{el.name_blog}}</h3>
+                <p>{{el.data_blog}}</p>
+                <p>{{el.athor_blog}}</p>
+                <a href="" class ="btn btn-warning">Читать далее</a>
+
+            </div>
+
+        {% endfor %}
+        </div>
         {% endblock %}
     </main>
 

@@ -58,3 +58,31 @@ nav ul li {
 }
 
 
+
+main .blog{
+    float:left;
+    color:#fff;
+    margin-top:10px;
+    text-align:center;
+    width:75%;
+}
+
+.alert-warning{
+    border-radius: 10px;
+    float:left;
+    clear:both;
+    width:400px;
+    margin:20px 34%;
+    text-align:left;
+
+
+}
+.alert-warning a{
+    display: block;
+    text-align:center;
+
+}
+
+
+
+
