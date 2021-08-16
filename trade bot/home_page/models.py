@@ -1,4 +1,4 @@
-# from django.db import models
+from django.db import models
 #
 # class Blog(models.Model):
 #     name_blog = models.TextField('Название')

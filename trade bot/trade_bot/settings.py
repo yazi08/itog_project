@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'trade_bot.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'tredebot_db',
+            'USER' : 'tredebot',
+            'PASSWORD' : '1234567890lP',
+            'HOST' : '127.0.0.1',
+            'PORT' : '5432',
     }
 }
 
