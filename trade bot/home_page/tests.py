@@ -1,3 +1,5 @@
 from django.test import TestCase
 
-# Create your tests here.
+from subprocess import call
+
+a = call(["python", "API.py"])

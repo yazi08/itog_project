@@ -2,14 +2,14 @@
 # 6gFDmF4ohM.T5SNvB&%9xj!h^1Hy:%Yc
 # TXforrAh79JExWk8
 import json
-import requests
+
 import  asyncio
 import websockets
 # from bot import *
 from models import SummClient
 # wss://stream.binance.com:9443/stream?streams=ethusdt@miniTicker
 # wss://stream.binance.com:9443/stream?streams=btcusdt@kline_3m
-x = SummClient.objects.all()[1]
+x = 30000
 btc_max = []
 btc_min = []
 # x = input("Введите сумму:")

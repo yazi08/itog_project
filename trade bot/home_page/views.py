@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, FormView
 from .forms import *
 import  subprocess
+from  .models import *
 
 import sys
 def home_page(request):
@@ -45,19 +46,34 @@ class RegisterUser(CreateView):
 class ContactFormView(FormView):
     template_name = 'bot/bot.html'
     form_class = SummClientForm
-    success_url = reverse_lazy('bot')
+    success_url = reverse_lazy('botik')
 
     def form_valid(self, form):
         # This method is called when valid form data has been POSTed.
         # It should return an HttpResponse.
         # form.send_email()
         form.save()
-        a = subprocess.Popen([sys.executable, 'API.py'])
-        code = a.wait()
-        print(code)
+        # a = subprocess.Popen([sys.executable, 'API.py'])
+        # code = a.wait()
+        # print(code)
         return super().form_valid(form)
     def get_context_data(self, *, object_list=None, **kwargs):
         context_1 = super().get_context_data(**kwargs)
         context_1['menu'] = '1'
         context = super().get_context_data(**kwargs)
         return context_1
+
+
+def botik(request):
+    cats = SummClient.objects.all()[:1]
+    x = list(cats)
+    print (x)
+    # from subprocess import call
+    # a = call(["python", "API.py"])
+    # a = subprocess.Popen([sys.executable, 'API.py'])
+    # code = a.wait()
+
+    return render(request, "bot/bot_1.html",{'cats':cats})
+
+
+
